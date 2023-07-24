@@ -57,9 +57,9 @@ public class Calccontroller {
 	        }
 	        catch(IllegalArgumentException e)
 	        {
-	        	ModelAndView error=new ModelAndView("Calculator");
-	        	error.addObject("Error "+e.getMessage());
-	        	return error;
+	        	ModelAndView errorModelAndView=new ModelAndView("Calculator");
+	        	errorModelAndView.addObject("error"+e.getMessage());
+	        	return errorModelAndView;
 	        	
 	        }
 	        ModelAndView modelandview = new ModelAndView("Calculator");

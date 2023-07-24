@@ -24,8 +24,8 @@
         <input type="submit" value="submit" />
     </form>
 
-    <c:if test="${not empty Error }">
-        <p>${Error}</p>
+    <c:if test="${not empty error}">
+        <p>${error}</p>
     </c:if>
 
     <c:if test="${not empty result}">
