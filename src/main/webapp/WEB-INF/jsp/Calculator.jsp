@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,14 +25,13 @@
         <input type="submit" value="submit" />
     </form>
 
-    <c:if test="${not empty error}">
-        <p>${error}</p>
-    </c:if>
-
-    <c:if test="${not empty result}">
+  <% if (request.getAttribute("error") != null) { %>
+        <br/><br> <p align="center" ><%= request.getAttribute("error") %></p>
+    <% } %>
+    
+   <%  if (request.getAttribute("result")!= null) {%>
       <br/><br>  <h2 align="center">Result: ${result}</h2>
-    </c:if>
-    
-    
+       
+    <%} %>
 </body>
 </html>
